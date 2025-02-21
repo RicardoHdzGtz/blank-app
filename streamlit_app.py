@@ -1,7 +1,7 @@
-import streamlit as st
+import streamlit as st 
 
 # Configurar la página
-st.set_page_config(page_title="Yeeezy", page_icon="🚀", layout="wide")
+st.set_page_config(page_title="Yeeezy", page_icon="🎵", layout="wide")
 
 # Estilos personalizados
 st.markdown(
@@ -20,17 +20,43 @@ st.markdown(
         color: #00ff99;
         font-weight: bold;
     }
+    .subtitle {
+        text-align: center;
+        font-size: 24px;
+        color: #bbbbbb;
+        margin-top: -10px;
+    }
+    .info-box {
+        background-color: #222;
+        padding: 15px;
+        border-radius: 10px;
+        text-align: center;
+        font-size: 18px;
+        color: white;
+        margin-top: 20px;
+    }
     </style>
     """,
     unsafe_allow_html=True
 )
 
-# Título con mejor diseño
-st.markdown("<div class='title'>🚀 Bienvenido a Yeeezy</div>", unsafe_allow_html=True)
+# Título y subtítulo
+st.markdown("<div class='title'>Bienvenido a Yeeezy</div>", unsafe_allow_html=True)
+st.markdown("<div class='subtitle'>Página de datos sobre música</div>", unsafe_allow_html=True)
 
-st.write(
-    "¡Comienza a construir tu aplicación! Para obtener ayuda e inspiración, visita [Streamlit Docs](https://docs.streamlit.io/)."
-)
+# Datos interesantes sobre Oasis
+dato_oasis_1 = """
+🎸 ¿Sabías que...?  
+Cuando Oasis grabó Wonderwall, Noel Gallagher originalmente quería que la canción fuera cantada por él,  
+pero al final dejó que su hermano Liam la interpretara. Hoy es una de las canciones más icónicas de la banda.  
+"""
 
-st.sidebar.title("🔧 Configuración")
-st.sidebar.write("Ajusta las opciones de tu app aquí.")
+dato_oasis_2 = """
+🎤 Otro dato curioso: 
+En 1994, Oasis fue vetado de los Estados Unidos después de que sus miembros fueran detenidos en el aeropuerto  
+por comportamiento indebido. A pesar de esto, la banda se convirtió en un fenómeno global.  
+"""
+
+# Mostrar los datos
+st.markdown(f"<div class='info-box'>{dato_oasis_1}</div>", unsafe_allow_html=True)
+st.markdown(f"<div class='info-box'>{dato_oasis_2}</div>", unsafe_allow_html=True)
